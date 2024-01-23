@@ -1,4 +1,4 @@
-export default function InputBox({ htmlFor, label, type, placeholder, icon }) {
+export default function InputBox({ id, htmlFor, label, type, placeholder, icon }) {
     return (
         <>
             <div>
@@ -6,6 +6,7 @@ export default function InputBox({ htmlFor, label, type, placeholder, icon }) {
 
                 <div className="relative">
                     <input
+                        id={id}
                         type={type}
                         className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                         placeholder={placeholder}
