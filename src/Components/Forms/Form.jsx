@@ -1,4 +1,4 @@
-export default function Form({ action, children }) {
+export default function FormCard({ action, children }) {
     return (
 
         <>

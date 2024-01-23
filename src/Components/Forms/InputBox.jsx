@@ -1,8 +1,8 @@
-export default function InputBox({ id, htmlFor, label, type, placeholder, icon }) {
+export default function InputBox({ id, label, type, placeholder, icon }) {
     return (
         <>
             <div>
-                <label htmlFor={htmlFor} className="sr-only">{label}</label>
+                <label htmlFor={id} className="sr-only">{label}</label>
 
                 <div className="relative">
                     <input
