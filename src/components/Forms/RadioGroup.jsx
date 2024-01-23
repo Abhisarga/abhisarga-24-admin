@@ -7,6 +7,11 @@ export function RadioGroup({ id, label, children, cols = 1 }) {
     pass RadioItem s as children
     */
     return (<>
+        {/* make tailwind generate css for all these grid cols options */}
+        <div className="hidden grid-cols-2"></div>
+        <div className="hidden grid-cols-1"></div>
+        <div className="hidden grid-cols-3"></div>
+
         <fieldset id={id} className={`grid grid-cols-${cols} gap-4`}>
             <legend className="sr-only">{label}</legend>
 
