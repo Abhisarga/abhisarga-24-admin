@@ -1,7 +1,7 @@
 export default function RootLayout({ children }) {
     return (<>
         <div className="flex">
-            <div className="flex h-screen flex-col justify-between border-e bg-white max-w-sm lg:max-w-md">
+            <div className="flex flex-col justify-between border-e bg-white max-w-sm lg:max-w-md">
                 <div className="px-4 py-6">
                     <span className="grid h-10 w-32 place-content-center rounded-lg bg-gray-100 text-xs text-gray-600">
                         Abhisarga 24
@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
                                 </summary>
 
                                 <ul className="mt-2 space-y-1 px-4">
-                                <li>
+                                    <li>
                                         <a
                                             href=""
                                             className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
@@ -161,7 +161,12 @@ export default function RootLayout({ children }) {
                     </a>
                 </div>
             </div>
-            <div className="bg-gray-50 w-full">{children}</div>
+            <div className="bg-gray-50 w-full">
+
+                <div className="w-max-md mx-auto text-black">
+                    {children}
+                </div>
+            </div>
 
         </div>
 
