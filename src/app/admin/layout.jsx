@@ -1,7 +1,7 @@
 export default function RootLayout({ children }) {
     return (<>
         <div className="flex">
-            <div className="flex flex-col justify-between border-e bg-white max-w-sm lg:max-w-md">
+            <div className="h-screen sticky top-0 flex flex-col justify-between border-e bg-white max-w-sm lg:max-w-md">
                 <div className="px-4 py-6">
                     <span className="grid h-10 w-32 place-content-center rounded-lg bg-gray-100 text-xs text-gray-600">
                         Abhisarga 24
@@ -163,7 +163,7 @@ export default function RootLayout({ children }) {
             </div>
             <div className="bg-gray-50 w-full">
 
-                <div className="w-max-md mx-auto text-black">
+                <div className="w-max-lg mx-auto text-black">
                     {children}
                 </div>
             </div>

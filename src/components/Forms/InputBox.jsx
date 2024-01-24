@@ -7,6 +7,7 @@ export default function InputBox({ id, label, type, placeholder, icon }) {
                 <div className="relative">
                     <input
                         id={id}
+                        name={id}
                         type={type}
                         className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                         placeholder={placeholder}

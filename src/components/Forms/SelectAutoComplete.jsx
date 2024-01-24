@@ -11,6 +11,7 @@ pass the options as children
                 <div className="relative mt-1.5">
                     <input
                         type="text"
+                        name={id}
                         list={`${id}List`}
                         id={id}
                         className="w-full rounded-lg border-gray-300 pe-10 text-gray-700 sm:text-sm [&::-webkit-calendar-picker-indicator]:opacity-0"

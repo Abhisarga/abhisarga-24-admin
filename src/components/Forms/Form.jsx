@@ -1,8 +1,10 @@
-export function FormCard({ action, children }) {
+'use client';
+
+export function FormCard({ children, handleSubmit }) {
     return (
 
         <>
-            <form action={action} className="mb-0 mt-6 space-y-4 rounded-lg p-8 shadow-lg sm:p-6 lg:p-8">
+            <form className="mb-0 mt-6 space-y-4 rounded-lg p-8 shadow-lg sm:p-6 lg:p-8" onSubmit={handleSubmit}>
                 {children}
             </form>
         </>
