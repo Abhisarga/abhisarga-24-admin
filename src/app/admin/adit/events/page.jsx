@@ -58,16 +58,22 @@ export default function Page() {
 
                     <InputBox id={'event.registration'} label={'Event Registration'} placeholder={'Enter event registration link'} />
 
-                    {/* <ListItem id={1} label={'Hellow'}> */}
-                    <ListInput label={'Round'}>
-                        <InputBox id={'round.number'} label={'Round Number'} placeholder={'Round Number'} />
-                        <RadioGroup id={'round.mode'} label={'Round Mode'} cols={3}>
-                            <RadioItem itemKey={'Online'} id={'round.mode.online'} groupName={'round.mode'} />
-                            <RadioItem itemKey={'Offline'} id={'round.mode.offline'} groupName={'round.mode'} />
-                            <RadioItem itemKey={'Hybrid'} id={'round.mode.hybrid'} groupName={'round.mode'} />
-                        </RadioGroup>
-                    </ListInput>
-                    {/* </ListItem> */}
+
+                    <ListInput label={'Round'} getContent={(lid) => {
+                        return (
+                            <>
+                                <InputBox id={`round.number.${lid}`} label={'Round Number'} placeholder={'Round Number'} />
+                                <RadioGroup id={`round.mode.${lid}`} label={'Round Mode'} cols={3} options={['Online', 'Offline', 'Hybrid']}>
+                                    <RadioItem itemKey={'Online'} id={`round.mode.online.${lid}`} groupName={`round.mode.${lid}`} />
+                                    <RadioItem itemKey={'Offline'} id={`round.mode.offline.${lid}`} groupName={`round.mode.${lid}`} />
+                                    <RadioItem itemKey={'Hybrid'} id={`round.mode.hybrid.${lid}`} groupName={`round.mode.${lid}`} />
+                                </RadioGroup>
+                            </>
+                        );
+
+
+                    }} />
+
 
                     <FormFooter>
                         <SubmitButton type={'submit'} label={'Add Event'} />

@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import { DeleteIcon } from "../Icons/Icons";
-export function ListInput({ label, children }) {
+export function ListInput({ label, getContent }) {
     const [items, setItems] = useState([
         { id: 1 },
         // Add more initial items as needed
@@ -10,7 +10,7 @@ export function ListInput({ label, children }) {
     const handleAddItem = () => {
         const newItem = {
             id: items.length + 1,
-            content: children,
+            content: getContent(items.length+1),
         };
 
         setItems([...items, newItem]);
@@ -27,8 +27,8 @@ export function ListInput({ label, children }) {
     return (<>
 
         {items.map((item) => (
-            <ListItem key={item.id} id={item.id} label={label} handleDelete={handleDeleteItem}>
-                {children}
+            <ListItem key={item.id} id={item.id} label={label} handleDelete={handleDeleteItem} content={getContent(item.id)}>
+
             </ListItem>
         ))}
 
@@ -43,7 +43,7 @@ export function ListInput({ label, children }) {
     </>);
 }
 
-export function ListItem({ id, label, handleDelete, children }) {
+export function ListItem({ id, label, handleDelete, content }) {
     return (<>
         <div id={id} className="bg-gray-50 rounded-lg w-max-3/4 shadow-lg px-4 space-y-4 pt-2 pb-4">
             <div className="flex justify-between items-center py-3 px-4 border-b ">
@@ -58,7 +58,7 @@ export function ListItem({ id, label, handleDelete, children }) {
                     <DeleteIcon />
                 </button>
             </div>
-            {children}
+            {content}
 
 
         </div>
