@@ -73,7 +73,7 @@ export default function Page() {
 
 
                     <FormFooter>
-                        <SubmitButton type={'submit'} label={'Add new Person'} />
+                        <SubmitButton type={'submit'} label={'Save Person'} />
 
                         <ExtraLink link={''} label={'View all Person'} />
                     </FormFooter>

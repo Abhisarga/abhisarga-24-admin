@@ -10,6 +10,7 @@ import { SelectAutoComplete } from '@/components/Forms/SelectAutoComplete';
 import { SelectDropDown } from '@/components/Forms/SelectDropDown';
 import { RadioGroup, RadioItem } from '@/components/Forms/RadioGroup';
 import { ListInput, ListItem } from '@/components/Forms/ListInput';
+import FileUpload from '@/components/Forms/FileUpload';
 
 export default function Page() {
 
@@ -44,7 +45,7 @@ export default function Page() {
 
 
 
-                    <SelectAutoComplete id={'event.club'} placeholder={'Enter club'}>
+                    <SelectAutoComplete id={'event.club'} placeholder={'Enter the club organizing this event'} label={'Host Club'}>
                         <option value="Nirvana">Nirvana</option>
                         <option value="Enigma">Enigma</option>
                         <option value="GDSC">GDSC</option>
@@ -52,9 +53,9 @@ export default function Page() {
                         <option value="Meraki">Meraki</option>
                     </SelectAutoComplete>
 
-                    <TextArea id={'event.description'} placeholder={'Enter event details'} />
+                    <TextArea id={'event.description'} placeholder={'Enter event details'} label={'Event Description'} />
 
-                    <InputBox id={'event.poster'} label={'Event Poster'} placeholder={'Enter event poster link'} />
+                    <FileUpload id={'event.poster'} label={'Event Poster'} help={'JPEG, PNG'} />
 
                     <InputBox id={'event.registration'} label={'Event Registration'} placeholder={'Enter event registration link'} />
 
@@ -76,7 +77,7 @@ export default function Page() {
 
 
                     <FormFooter>
-                        <SubmitButton type={'submit'} label={'Add Event'} />
+                        <SubmitButton type={'submit'} label={'Save Event'} />
 
                         <ExtraLink link={''} label={'View all events'} />
                     </FormFooter>
