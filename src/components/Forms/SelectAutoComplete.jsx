@@ -1,5 +1,5 @@
 import { UpDownArrowIcon } from "./FormIcons";
-export function SelectAutoComplete({ id, label, placeholder, children }) {
+export function SelectAutoComplete({ id, label, placeholder, options, children }) {
     /*
 pass the options as children
 */
@@ -14,7 +14,7 @@ pass the options as children
                         name={id}
                         list={`${id}List`}
                         id={id}
-                        className="w-full rounded-lg border-gray-300 pe-10 text-gray-700 sm:text-sm [&::-webkit-calendar-picker-indicator]:opacity-0"
+                        className="w-full rounded-lg border-gray-300 pe-10 p-3 text-gray-700 sm:text-sm [&::-webkit-calendar-picker-indicator]:opacity-0"
                         placeholder={placeholder}
                     />
 
@@ -23,9 +23,12 @@ pass the options as children
                     </span>
                 </div>
 
-                <datalist name={id} id={`${id}List`}>
+                {!options && <datalist name={id} id={`${id}List`}>
                     {children}
-                </datalist>
+                </datalist>}
+                {options && <datalist name={id} id={`${id}List`}>
+                    {options.map((option, index) => (<option key={index} value={option}> {option}</option>))}
+                </datalist>}
             </div>
         </>
     );
