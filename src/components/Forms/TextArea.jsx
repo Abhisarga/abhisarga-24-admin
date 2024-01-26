@@ -2,7 +2,7 @@ export default function TextArea({ id, label, placeholder }) {
     return (<>
 
         <div>
-            <label htmlFor={id} className="block text-sm font-medium text-gray-700"> {label} </label>
+            <label htmlFor={id} className="block text-sm font-medium text-gray-700 p-1"> {label} </label>
 
             <textarea
                 id={id}
