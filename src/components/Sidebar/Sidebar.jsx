@@ -5,7 +5,7 @@ export default function SideBar({ appName, homeLink, children }) {
     return (<>
         <div className="h-screen sticky top-0 flex flex-col justify-between border-e bg-white max-w-sm lg:max-w-md">
             <div className="px-4 py-6">
-                <a href={homeLink}> <span className="grid h-10 w-32 place-content-center rounded-lg bg-gray-100 text-xs text-gray-600">
+                <a href={homeLink}> <span className="hover:shadow-lg hover:font-extrabold grid h-10 w-32 place-content-center rounded-lg bg-indigo-700 text-sm text-white font-bold">
                     {appName}
                 </span></a>
 
