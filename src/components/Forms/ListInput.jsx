@@ -10,7 +10,7 @@ export function ListInput({ label, getContent }) {
     const handleAddItem = () => {
         const newItem = {
             id: items.length + 1,
-            content: getContent(items.length+1),
+            content: getContent(items.length + 1),
         };
 
         setItems([...items, newItem]);
@@ -43,22 +43,23 @@ export function ListInput({ label, getContent }) {
     </>);
 }
 
-export function ListItem({ id, label, handleDelete, content }) {
+export function ListItem({ id, label, handleDelete, content , children}) {
     return (<>
         <div id={id} className="bg-gray-50 rounded-lg w-max-3/4 shadow-lg px-4 space-y-4 pt-2 pb-4">
             <div className="flex justify-between items-center py-3 px-4 border-b ">
                 <h3 className="font-normal text-gray-800 ">
-                    {`${label} ${id}`}
+                    {`${label} ${handleDelete && id || ''}`}
                 </h3>
-                <button
+                {handleDelete && <button
                     type="button"
                     onClick={() => handleDelete(id)}
                     className="flex justify-center items-center w-12 h-12 text-sm font-semibold rounded-full border  text-gray-800 hover:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none  hover:outline-4  hover:text-red-500 "
                 >
                     <DeleteIcon />
-                </button>
+                </button>}
             </div>
             {content}
+            {children}
 
 
         </div>
