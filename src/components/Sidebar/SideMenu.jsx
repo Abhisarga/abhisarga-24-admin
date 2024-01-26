@@ -12,7 +12,7 @@ export function SideMenu({ title, link }) {
         <li>
             <a
                 href={link}
-                className={`block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-indigo-100 hover:text-gray-700 ${isActive ? 'bg-indigo-600 font-semibold text-white' : 'font-medium'}`}
+                className={`block rounded-lg px-4 py-2 text-sm text-gray-500 ${isActive ? 'bg-indigo-600 font-semibold text-white hover:shadow-lg hover:font-bold' : 'font-medium hover:bg-indigo-100 hover:text-gray-700'}`}
             >
                 {title}
             </a>
