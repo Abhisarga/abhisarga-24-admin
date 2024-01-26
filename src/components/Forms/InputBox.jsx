@@ -2,14 +2,14 @@ export default function InputBox({ id, label, type, placeholder, icon }) {
     return (
         <>
             <div>
-                <label htmlFor={id} className="sr-only">{label}</label>
+                <label htmlFor={id} className="block text-sm font-medium text-gray-700 p-1">{label}</label>
 
                 <div className="relative">
                     <input
                         id={id}
                         name={id}
                         type={type}
-                        className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                        className="w-full rounded-lg border-gray-200 p-3 pe-12 text-sm shadow-sm"
                         placeholder={placeholder}
                     />
 
