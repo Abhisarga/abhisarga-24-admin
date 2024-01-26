@@ -35,7 +35,7 @@ export function ListInput({ label, getContent }) {
         <button
             type="button"
             onClick={handleAddItem}
-            className="bg-indigo-500 text-white px-4 py-1 rounded"
+            className="bg-indigo-600 text-white px-4 py-2 rounded text-sm"
         >
             {`Add ${label}`}
         </button>
@@ -43,7 +43,7 @@ export function ListInput({ label, getContent }) {
     </>);
 }
 
-export function ListItem({ id, label, handleDelete, content , children}) {
+export function ListItem({ id, label, handleDelete, content, children }) {
     return (<>
         <div id={id} className="bg-gray-50 rounded-lg w-max-3/4 shadow-lg px-4 space-y-4 pt-2 pb-4">
             <div className="flex justify-between items-center py-3 px-4 border-b ">
