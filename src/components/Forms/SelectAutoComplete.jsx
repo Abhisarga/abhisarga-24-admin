@@ -6,7 +6,7 @@ pass the options as children
     return (
         <>
             <div>
-                <label htmlFor={id} className="block text-sm font-medium text-gray-900">{label} </label>
+                <label htmlFor={id} className="block text-sm font-medium text-gray-700 p-1">{label} </label>
 
                 <div className="relative mt-1.5">
                     <input
