@@ -13,7 +13,7 @@ export function RadioGroup({ id, label, children, cols = 1 }) {
         <div className="hidden grid-cols-3"></div>
 
         <fieldset id={id} className={`grid grid-cols-${cols} gap-4`}>
-            <legend className="sr-only">{label}</legend>
+            <legend className="block text-sm font-medium text-gray-700 p-1">{label}</legend>
 
             {children}
         </fieldset>
