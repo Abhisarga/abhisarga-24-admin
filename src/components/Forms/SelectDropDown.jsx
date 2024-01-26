@@ -10,7 +10,7 @@ export function SelectDropDown({ id, label, children }) {
                 <select
                     name={id}
                     id={id}
-                    className="mt-1.5 w-full rounded-lg border-gray-300 text-gray-700 sm:text-sm"
+                    className="mt-1.5 w-full rounded-lg border-gray-300 text-gray-700 sm:text-sm p-3"
                 >
                     {children}
                 </select>
