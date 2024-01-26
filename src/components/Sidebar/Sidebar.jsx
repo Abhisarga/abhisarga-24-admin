@@ -1,13 +1,14 @@
 
 
-export default function SideBar({ appName, children }) {
+export default function SideBar({ appName, homeLink, children }) {
     // pass the sidebaritems as children
     return (<>
         <div className="h-screen sticky top-0 flex flex-col justify-between border-e bg-white max-w-sm lg:max-w-md">
             <div className="px-4 py-6">
-                <span className="grid h-10 w-32 place-content-center rounded-lg bg-gray-100 text-xs text-gray-600">
+                <a href={homeLink}> <span className="grid h-10 w-32 place-content-center rounded-lg bg-gray-100 text-xs text-gray-600">
                     {appName}
-                </span>
+                </span></a>
+
 
                 <ul className="mt-6 space-y-1">
                     {children}

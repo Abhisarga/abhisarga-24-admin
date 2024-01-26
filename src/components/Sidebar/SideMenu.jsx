@@ -1,11 +1,18 @@
+'use client'
+
 import { ExpandDownIcon } from "../Icons/Icons";
+import { usePathname } from 'next/navigation';
 
 export function SideMenu({ title, link }) {
+    const pathname = usePathname();
+    console.log(pathname);
+    console.log(link);
+    const isActive = pathname === link;
     return (<>
         <li>
             <a
                 href={link}
-                className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                className={`block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 ${isActive ? 'bg-gray-200' : ''}`}
             >
                 {title}
             </a>

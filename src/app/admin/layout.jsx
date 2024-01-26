@@ -1,29 +1,25 @@
+'use client'
+
 import { SideMenu, SideMenuGroup } from "@/components/Sidebar/SideMenu";
 import SideBar from "@/components/Sidebar/Sidebar";
 
 export default function RootLayout({ children }) {
+
+    const urlBase = '/admin/adit/';
     return (<>
         <div className="flex">
-            <SideBar appName={'Abhisarga 24'}>
-                <SideMenu title={'Admin Users'} link={''} />
+            <SideBar appName={'Abhisarga 24'} homeLink={'/admin'}>
+                <SideMenu title={'Users'} link={urlBase + 'users'} />
 
                 <SideMenuGroup title={'Clubs'}>
-                    <SideMenu title={'Club'} link={'clubs'} />
-                    <SideMenu title={'Events'} link={'events'} />
+                    <SideMenu title={'Club'} link={urlBase + 'clubs'} />
+                    <SideMenu title={'Events'} link={urlBase + 'events'} />
                 </SideMenuGroup>
 
 
-                <SideMenu title={'Sponsors'} link={'sponsors'} />
+                <SideMenu title={'Sponsors'} link={urlBase + 'sponsors'} />
 
-                <SideMenu title={'Persons'} link={'person'} />
-
-                <SideMenuGroup title={'Account'}>
-
-                    <SideMenu title={'Details'} link={''} />
-                    <SideMenu title={'Security'} link={''} />
-                    <SideMenu title={'Logout'} link={''} />
-                </SideMenuGroup>
-
+                <SideMenu title={'Persons'} link={urlBase + 'person'} />
 
 
             </SideBar>
