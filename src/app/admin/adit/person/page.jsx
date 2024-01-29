@@ -5,7 +5,6 @@ import { Arena, ArenaTitle, ArenaDescription } from '@/components/Arena/Arena';
 import { ExtraLink, FormCard, FormDescription, FormFooter, FormHeader, FormTitle } from '@/components/Forms/Form';
 import SubmitButton from '@/components/Forms/Submit';
 import TextArea from '@/components/Forms/TextArea';
-import { SelectAutoComplete } from '@/components/Forms/SelectAutoComplete';
 import { SelectDropDown } from '@/components/Forms/SelectDropDown';
 import { RadioGroup, RadioItem } from '@/components/Forms/RadioGroup';
 import { ListItem } from '@/components/Forms/ListInput';
@@ -63,7 +62,7 @@ export default function Page() {
 
 
 
-                    <SelectAutoComplete id={'lead'} label={'Person Type'} placeholder={'Enter Person Type'} options={personTypesArray} />
+                    <SelectDropDown id={'lead'} label={'Person Type'} placeholder={'Enter Person Type'} options={personTypesArray} />
                     <ListItem label={'Person Socials'} id='person.socials'>
                         <InputBox id={'person.socials.instagram'} label={'Instagram'} type={'text'} placeholder={'Enter instagram url'} />
                         <InputBox id={'person.socials.linkedin'} label={'Linkedin'} type={'text'} placeholder={'Enter linkedin url'} />

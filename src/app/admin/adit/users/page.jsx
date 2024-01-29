@@ -5,7 +5,7 @@ import { Arena, ArenaTitle, ArenaDescription } from '@/components/Arena/Arena';
 import { ExtraLink, FormCard, FormDescription, FormFooter, FormHeader, FormTitle } from '@/components/Forms/Form';
 import SubmitButton from '@/components/Forms/Submit';
 import TextArea from '@/components/Forms/TextArea';
-import { SelectAutoComplete } from '@/components/Forms/SelectAutoComplete';
+import { SelectDropDown } from '@/components/Forms/SelectDropDown';
 import { SelectDropDown } from '@/components/Forms/SelectDropDown';
 import { RadioGroup, RadioItem } from '@/components/Forms/RadioGroup';
 import { ListItem } from '@/components/Forms/ListInput';
@@ -56,13 +56,13 @@ export default function Page() {
 
                     </SelectDropDown>
 
-                    <SelectAutoComplete id={'user.club'} label={'Club'}>
+                    <SelectDropDown id={'user.club'} label={'Club'}>
                         <option value={'None'} > None </option>
                         <option value={'Enigma'} > Enigma </option>
                         <option value={'GDSC'} > GDSC </option>
 
 
-                    </SelectAutoComplete>
+                    </SelectDropDown>
 
 
 

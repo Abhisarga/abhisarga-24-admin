@@ -6,7 +6,6 @@ import { Arena, ArenaTitle, ArenaDescription } from '@/components/Arena/Arena';
 import { ExtraLink, FormCard, FormDescription, FormFooter, FormHeader, FormTitle } from '@/components/Forms/Form';
 import SubmitButton from '@/components/Forms/Submit';
 import TextArea from '@/components/Forms/TextArea';
-import { SelectAutoComplete } from '@/components/Forms/SelectAutoComplete';
 import { SelectDropDown } from '@/components/Forms/SelectDropDown';
 import { RadioGroup, RadioItem } from '@/components/Forms/RadioGroup';
 import { ListInput, ListItem } from '@/components/Forms/ListInput';

@@ -6,7 +6,6 @@ import { Arena, ArenaTitle, ArenaDescription } from '@/components/Arena/Arena';
 import { ExtraLink, FormCard, FormDescription, FormFooter, FormHeader, FormTitle } from '@/components/Forms/Form';
 import SubmitButton from '@/components/Forms/Submit';
 import TextArea from '@/components/Forms/TextArea';
-import { SelectAutoComplete } from '@/components/Forms/SelectAutoComplete';
 import { SelectDropDown } from '@/components/Forms/SelectDropDown';
 import { RadioGroup, RadioItem } from '@/components/Forms/RadioGroup';
 import { ListInput, ListItem } from '@/components/Forms/ListInput';
@@ -62,7 +61,7 @@ export default function Page() {
 
                     <ListInput label={'Co Lead'} getContent={(lid) => {
                         return (<>
-                            <SelectAutoComplete id={`coLeads-${lid}`} label={'Co Lead Person'} placeholder={'Enter colead'}>
+                            <SelectDropDown id={`coLeads-${lid}`} label={'Co Lead Person'} placeholder={'Enter colead'}>
 
                                 <option value="JM">John Mayer</option>
                                 <option value="SRV">Stevie Ray Vaughn</option>
@@ -71,11 +70,11 @@ export default function Page() {
                                 <option value="AK">Albert King</option>
                                 <option value="BG">Buddy Guy</option>
                                 <option value="EC">Eric Clapton</option>
-                            </SelectAutoComplete>
+                            </SelectDropDown>
                         </>);
                     }} />
 
-                    <SelectAutoComplete id={'representative'} label={'Club Representative'} placeholder={'Enter Club Representative'}>
+                    <SelectDropDown id={'representative'} label={'Club Representative'} placeholder={'Enter Club Representative'}>
 
                         <option value="JM">John Mayer</option>
                         <option value="SRV">Stevie Ray Vaughn</option>
@@ -84,7 +83,7 @@ export default function Page() {
                         <option value="AK">Albert King</option>
                         <option value="BG">Buddy Guy</option>
                         <option value="EC">Eric Clapton</option>
-                    </SelectAutoComplete>
+                    </SelectDropDown>
 
 
 

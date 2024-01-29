@@ -5,7 +5,6 @@ import { Arena, ArenaTitle, ArenaDescription } from '@/components/Arena/Arena';
 import { ExtraLink, FormCard, FormDescription, FormFooter, FormHeader, FormTitle } from '@/components/Forms/Form';
 import SubmitButton from '@/components/Forms/Submit';
 import TextArea from '@/components/Forms/TextArea';
-import { SelectAutoComplete } from '@/components/Forms/SelectAutoComplete';
 import { SelectDropDown } from '@/components/Forms/SelectDropDown';
 import { RadioGroup, RadioItem } from '@/components/Forms/RadioGroup';
 import { ListItem } from '@/components/Forms/ListInput';
@@ -55,7 +54,7 @@ export default function Page() {
                     <FileUpload id={'sponsor.logo'} label={'Company Logo'} help={'PNG, JPEG'} />
 
 
-                    <SelectAutoComplete id={'sponsor.type'} label={'Sponsor Type'} placeholder={'Enter Sponsor Type'} options={sponsorTypes} />
+                    <SelectDropDown id={'sponsor.type'} label={'Sponsor Type'} placeholder={'Enter Sponsor Type'} options={sponsorTypes} />
 
                     <InputBox id={'sponsor.url'} label={'Sponsor Link'} placeholder={'Enter sponsor website url'} />
 
