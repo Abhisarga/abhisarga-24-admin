@@ -1,4 +1,4 @@
-export default function InputBox({ id, label, type, placeholder, icon }) {
+export default function InputBox({ id, label, type = "text", placeholder, icon }) {
     return (
         <>
             <div>
