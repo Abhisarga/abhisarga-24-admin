@@ -2,7 +2,7 @@ export function Arena({ children }) {
     return (
         <>
             <div className="mx-auto max-w-full px-4 py-16 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-lg">
+                <div className="mx-auto max-w-2xl">
                     {children}
                 </div>
 
