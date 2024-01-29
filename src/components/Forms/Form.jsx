@@ -10,6 +10,7 @@ const isNumeric = value =>
     value.length !== 0 && [...value].every(c => c >= '0' && c <= '9');
 
 function aahniks_recursiveSyntaxProcessor(key, value, variables) {
+    if (key.includes('@exclude.')) return variables;
     if (key.includes('-')) {
         console.log("key includes -, processing as array:");
         // for array items

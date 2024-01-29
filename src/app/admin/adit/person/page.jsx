@@ -9,6 +9,7 @@ import { SelectAutoComplete } from '@/components/Forms/SelectAutoComplete';
 import { SelectDropDown } from '@/components/Forms/SelectDropDown';
 import { RadioGroup, RadioItem } from '@/components/Forms/RadioGroup';
 import { ListItem } from '@/components/Forms/ListInput';
+import FileUpload from '@/components/Forms/FileUpload';
 
 export default function Page() {
 
@@ -53,7 +54,7 @@ export default function Page() {
                     </FormHeader>
 
 
-                    <InputBox id={'person.name'} label={'Name'} type={'text'} placeholder={'Enter Person Name'} />
+                    <InputBox id={'name'} label={'Name'} type={'text'} placeholder={'Enter Person Name'} />
                     <InputBox id={'person.email'} label={'Email'} type={'email'} placeholder={'Enter Person email'} />
 
                     <InputBox id={'person.phone'} label={'Phone'} type={'text'} placeholder={'Enter person phone'} />
@@ -68,7 +69,7 @@ export default function Page() {
                         <InputBox id={'person.socials.linkedin'} label={'Linkedin'} type={'text'} placeholder={'Enter linkedin url'} />
                     </ListItem>
 
-                    <InputBox id={'person.profilePhoto'} label={'Profile Photo'} type={'text'} placeholder={'Enter profile photo url'} />
+                    <FileUpload id={'person.profilePhoto'} label={'Profile Photo'} help={'JPEG, PNG'} />
 
 
 

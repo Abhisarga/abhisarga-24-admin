@@ -26,3 +26,4 @@ Our components are built on top of the awesome [hyperui.dev](https://www.hyperui
   - https://chat.openai.com/share/8500873f-d9b1-4bdb-8c81-5923f4c51361
   - https://react.dev/reference/react/cloneElement
   - https://react.dev/reference/react/cloneElement#alternatives
+- https://stackoverflow.com/questions/29882361/show-datalist-labels-but-submit-the-actual-value

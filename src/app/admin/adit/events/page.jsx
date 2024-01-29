@@ -18,22 +18,13 @@ export default function Page() {
     return (
         <>
 
-
             <Arena>
-
-
-
                 <ArenaTitle title={'Add a new event'} />
 
                 <ArenaDescription description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati sunt dolores deleniti inventore quaerat mollitia?'} />
 
 
-                <FormCard handleSubmit={(event) => {
-                    event.preventDefault();
-                    const data = new FormData(event.target)
-                    data.forEach(console.log);
-
-                }}>
+                <FormCard>
 
                     <FormHeader>
                         <FormTitle title={'Event Details'} />
@@ -41,39 +32,66 @@ export default function Page() {
                     </FormHeader>
 
 
-                    <InputBox id={'event.name'} label={'Event Name'} type={'text'} placeholder={'Enter event name'} />
+                    <InputBox id={'name'} label={'Event Name'} type={'text'} placeholder={'Enter event name'} />
 
 
 
-                    <SelectAutoComplete id={'event.club'} placeholder={'Enter the club organizing this event'} label={'Host Club'}>
-                        <option value="Nirvana">Nirvana</option>
-                        <option value="Enigma">Enigma</option>
-                        <option value="GDSC">GDSC</option>
-                        <option value="IOTA">IOTA</option>
-                        <option value="Meraki">Meraki</option>
-                    </SelectAutoComplete>
+                    <SelectDropDown id={'club'} placeholder={'Select Club'} label={'Host Club'}>
+                        <option data-value="something" value="aesfhjasdkf">Nirvana</option>
+                        <option data-value="something" value="Enigma">Enigma</option>
+                        <option data-value="something" value="GDSC">Eniota</option>
+                        <option data-value="something" value="IOTA">Enpota</option>
+                        <option data-value="something" value="Meraki">Meraki</option>
+                    </SelectDropDown>
 
-                    <TextArea id={'event.description'} placeholder={'Enter event details'} label={'Event Description'} />
+                    <TextArea id={'description'} placeholder={'Enter event details'} label={'Event Description'} />
 
-                    <FileUpload id={'event.poster'} label={'Event Poster'} help={'JPEG, PNG'} />
+                    <FileUpload id={'poster'} label={'Event Poster'} help={'JPEG, PNG'} />
 
-                    <InputBox id={'event.registration'} label={'Event Registration'} placeholder={'Enter event registration link'} />
+                    <InputBox id={'registration'} label={'Event Registration'} placeholder={'Enter event registration link'} />
 
+                    <InputBox id={'prizePool'} label={'Prize Pool'} placeholder={'Enter event prize pool'} />
 
                     <ListInput label={'Round'} getContent={(lid) => {
                         return (
                             <>
-                                <InputBox id={`round.number.${lid}`} label={'Round Number'} placeholder={'Round Number'} />
-                                <RadioGroup id={`round.mode.${lid}`} label={'Round Mode'} cols={3} options={['Online', 'Offline', 'Hybrid']}>
-                                    <RadioItem itemKey={'Online'} id={`round.mode.online.${lid}`} groupName={`round.mode.${lid}`} />
-                                    <RadioItem itemKey={'Offline'} id={`round.mode.offline.${lid}`} groupName={`round.mode.${lid}`} />
-                                    <RadioItem itemKey={'Hybrid'} id={`round.mode.hybrid.${lid}`} groupName={`round.mode.${lid}`} />
+                                <InputBox id={`rounds-${lid}.name`} label={'Enter round name'} />
+                                <RadioGroup id={`rounds-${lid}.mode`} label={'Round Mode'} cols={3}>
+                                    <RadioItem itemKey={'Online'} id={`round.mode.online.${lid}`} groupName={`rounds-${lid}.mode`} value={'online'} />
+                                    <RadioItem itemKey={'Offline'} id={`round.mode.offline.${lid}`} groupName={`rounds-${lid}.mode`} value={'offline'} />
+                                    <RadioItem itemKey={'Hybrid'} id={`round.mode.hybrid.${lid}`} groupName={`rounds-${lid}.mode`} value={'hybrid'} />
                                 </RadioGroup>
+                                <TextArea label={'Description'} id={`rounds-${lid}.description`} />
+
+                                <InputBox
+                                    type={'datetime-local'}
+                                    label={'Select start datetime'}
+                                    id={`rounds-${lid}.start`}
+                                />
+                                <InputBox
+                                    type={'datetime-local'}
+                                    label={'Select end datetime'}
+                                    id={`rounds-${lid}.end`}
+                                />
+
+                                <ListInput label={'Organizer'} getContent={(lidInner) => {
+                                    return (
+                                        <>
+                                            <SelectDropDown id={`rounds-${lid}.organizers-${lidInner}`} label={'Organizer Name'} placeholder={'Search and Select organizer name'}>
+                                                <option value="data">data</option>
+
+                                            </SelectDropDown>
+                                        </>
+                                    );
+
+                                }} />
+
                             </>
                         );
 
-
                     }} />
+
+
 
 
                     <FormFooter>

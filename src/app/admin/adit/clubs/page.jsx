@@ -25,7 +25,7 @@ export default function Page() {
                 <ArenaDescription description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati sunt dolores deleniti inventore quaerat mollitia?'} />
 
 
-                <FormCard action={'/'}>
+                <FormCard>
 
                     <FormHeader>
                         <FormTitle title={'Club Details'} />
@@ -33,23 +33,23 @@ export default function Page() {
                     </FormHeader>
 
 
-                    <InputBox id={'club.name'} label={'Name'} type={'text'} placeholder={'Enter Club Name'} />
-                    <InputBox id={'club.abbreviation'} label={'Abbreviation'} type={'text'} placeholder={'Enter Club Abbreviation'} />
+                    <InputBox id={'name'} label={'Name'} type={'text'} placeholder={'Enter Club Name'} />
+                    <InputBox id={'abbreviation'} label={'Abbreviation'} type={'text'} placeholder={'Enter Club Abbreviation'} />
 
-                    <TextArea id={'club.description'} label={'Club Description'}
+                    <TextArea id={'description'} label={'Club Description'}
                         placeholder={'Enter club description'} />
 
 
-                    <FileUpload id={'club.logo'} label={'Club Logo'} help={'PNG, JPEG'} />
+                    <FileUpload id={'logo'} label={'Club Logo'} help={'PNG, JPEG'} />
 
                     <ListItem label={'Club Socials'} id='socials'>
-                        <InputBox id={'club.socials.instagram'} label={'Instagram'} type={'text'} placeholder={'Enter instagram url'} />
-                        <InputBox id={'club.socials.linkedin'} label={'Linkedin'} type={'text'} placeholder={'Enter linkedin url'} />
+                        <InputBox id={'socials.instagram'} label={'Instagram'} type={'text'} placeholder={'Enter instagram url'} />
+                        <InputBox id={'socials.linkedin'} label={'Linkedin'} type={'text'} placeholder={'Enter linkedin url'} />
                     </ListItem>
 
 
 
-                    <SelectAutoComplete id={'lead'} label={'Club Lead'} placeholder={'Enter Club Lead'}>
+                    <SelectDropDown id={'lead'} label={'Club Lead'} placeholder={'Enter Club Lead'}>
 
                         <option value="JM">John Mayer</option>
                         <option value="SRV">Stevie Ray Vaughn</option>
@@ -58,11 +58,11 @@ export default function Page() {
                         <option value="AK">Albert King</option>
                         <option value="BG">Buddy Guy</option>
                         <option value="EC">Eric Clapton</option>
-                    </SelectAutoComplete>
+                    </SelectDropDown>
 
                     <ListInput label={'Co Lead'} getContent={(lid) => {
                         return (<>
-                            <SelectAutoComplete id={`colead.${lid}`} label={'Co Lead Person'} placeholder={'Enter colead'}>
+                            <SelectAutoComplete id={`coLeads-${lid}`} label={'Co Lead Person'} placeholder={'Enter colead'}>
 
                                 <option value="JM">John Mayer</option>
                                 <option value="SRV">Stevie Ray Vaughn</option>
@@ -75,7 +75,7 @@ export default function Page() {
                         </>);
                     }} />
 
-                    <SelectAutoComplete id={'club.representative'} label={'Club Representative'} placeholder={'Enter Club Representative'}>
+                    <SelectAutoComplete id={'representative'} label={'Club Representative'} placeholder={'Enter Club Representative'}>
 
                         <option value="JM">John Mayer</option>
                         <option value="SRV">Stevie Ray Vaughn</option>
