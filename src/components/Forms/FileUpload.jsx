@@ -21,6 +21,7 @@ export default function FileUpload({ id, label, help }) {
                     aria-describedby={`${id}-help`}
                     id={id}
                     type="file"
+                    name={`fileUpload@${id}`}
                 />
                 <p
                     className=" text-sm text-gray-500 p-1.5"
