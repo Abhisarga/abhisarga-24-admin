@@ -9,6 +9,7 @@ import { SelectDropDown } from '@/components/Forms/SelectDropDown';
 import { RadioGroup, RadioItem } from '@/components/Forms/RadioGroup';
 import { ListItem } from '@/components/Forms/ListInput';
 import FileUpload from '@/components/Forms/FileUpload';
+import { CREATE_PERSON_MUTATION } from '@/graphql/mutations';
 
 export default function Page() {
 
@@ -45,7 +46,7 @@ export default function Page() {
                 <ArenaDescription description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati sunt dolores deleniti inventore quaerat mollitia?'} />
 
 
-                <FormCard action={'/'}>
+                <FormCard mutation={CREATE_PERSON_MUTATION}>
 
                     <FormHeader>
                         <FormTitle title={'Person Details'} />
@@ -54,7 +55,7 @@ export default function Page() {
 
 
                     <InputBox id={'name'} label={'Name'} type={'text'} placeholder={'Enter Person Name'} />
-                    <InputBox id={'person.email'} label={'Email'} type={'email'} placeholder={'Enter Person email'} />
+                    <InputBox id={'email'} label={'Email'} type={'email'} placeholder={'Enter Person email'} />
 
                     <InputBox id={'person.phone'} label={'Phone'} type={'text'} placeholder={'Enter person phone'} />
 

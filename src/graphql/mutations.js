@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 // Mutation to create an event
 export const CREATE_EVENT_MUTATION = gql`
@@ -71,5 +71,7 @@ export const CREATE_CLUB_MUTATION = gql`
     }
   }
 `;
+
+export const CREATE_PERSON_MUTATION = gql`write mutation here`;
 
 // Add similar exports for other mutations

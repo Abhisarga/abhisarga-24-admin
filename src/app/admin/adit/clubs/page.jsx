@@ -10,6 +10,7 @@ import { SelectDropDown } from '@/components/Forms/SelectDropDown';
 import { RadioGroup, RadioItem } from '@/components/Forms/RadioGroup';
 import { ListInput, ListItem } from '@/components/Forms/ListInput';
 import FileUpload from '@/components/Forms/FileUpload';
+import { CREATE_CLUB_MUTATION } from '@/graphql/mutations';
 
 export default function Page() {
     return (
@@ -24,7 +25,7 @@ export default function Page() {
                 <ArenaDescription description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati sunt dolores deleniti inventore quaerat mollitia?'} />
 
 
-                <FormCard>
+                <FormCard mutation={CREATE_CLUB_MUTATION}>
 
                     <FormHeader>
                         <FormTitle title={'Club Details'} />

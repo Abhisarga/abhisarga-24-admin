@@ -9,7 +9,7 @@ import { SelectDropDown } from '@/components/Forms/SelectDropDown';
 import { RadioGroup, RadioItem } from '@/components/Forms/RadioGroup';
 import { ListItem } from '@/components/Forms/ListInput';
 import FileUpload from '@/components/Forms/FileUpload';
-
+import { CREATE_SPONSOR_MUTATION } from '@/graphql/mutations';
 export default function Page() {
     const sponsorTypes = [
         "Title Sponsor",
@@ -40,7 +40,7 @@ export default function Page() {
                 <ArenaDescription description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati sunt dolores deleniti inventore quaerat mollitia?'} />
 
 
-                <FormCard action={'/'}>
+                <FormCard mutation={CREATE_SPONSOR_MUTATION}>
 
                     <FormHeader>
                         <FormTitle title={'Sponsor Details'} />

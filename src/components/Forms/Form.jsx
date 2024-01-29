@@ -66,7 +66,7 @@ function aahniks_recursiveSyntaxProcessor(key, value, variables) {
 }
 
 export function FormCard({ mutation, children }) {
-    // const [submitData, { loading, error }] = useMutation(mutation);
+    const [submitData, { loading, error }] = useMutation(mutation);
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -81,19 +81,22 @@ export function FormCard({ mutation, children }) {
         });
 
         try {
-            // const response = await submitData({
-            //     variables: { input: variables }, // Adjust the input structure as needed
-            // });
+            console.log(variables);
+
+            // TODO: TEST
+            const response = await submitData({
+                variables: { input: variables }, // Adjust the input structure as needed
+            });
 
             // // Access the data from the response
             // const responseData = response.data.YOUR_MUTATION_NAME;
 
-            // // Handle the result as needed
-            // console.log(responseData);
-            console.log(variables);
+            console.log(response);
+            // return success screen
         } catch (error) {
             // Handle errors
-            // console.error(error);
+            console.error(error);
+            //  return error screen
         }
     };
     console.log(mutation);

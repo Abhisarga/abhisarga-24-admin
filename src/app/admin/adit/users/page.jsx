@@ -10,7 +10,7 @@ import { SelectDropDown } from '@/components/Forms/SelectDropDown';
 import { RadioGroup, RadioItem } from '@/components/Forms/RadioGroup';
 import { ListItem } from '@/components/Forms/ListInput';
 import PasswordInputBox from '@/components/Forms/PasswordInput';
-
+import { REGISTER_MUTATION } from '@/graphql/mutations';
 export default function Page() {
 
 
@@ -28,7 +28,7 @@ export default function Page() {
                 <ArenaDescription description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati sunt dolores deleniti inventore quaerat mollitia?'} />
 
 
-                <FormCard action={'/'}>
+                <FormCard mutation={REGISTER_MUTATION}>
 
                     <FormHeader>
                         <FormTitle title={'User Details'} />
