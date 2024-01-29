@@ -35,7 +35,7 @@ export function ListInput({ label, getContent }) {
         <button
             type="button"
             onClick={handleAddItem}
-            className="bg-indigo-600 text-white px-4 py-2 rounded text-sm"
+            className="bg-indigo-600 text-white px-4 py-2 rounded text-sm hover:bg-indigo-700 hover:shadow-lg"
         >
             {`Add ${label}`}
         </button>
