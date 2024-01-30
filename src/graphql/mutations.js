@@ -72,6 +72,6 @@ export const CREATE_CLUB_MUTATION = gql`
   }
 `;
 
-export const CREATE_PERSON_MUTATION = gql`write mutation here`;
+// export const CREATE_PERSON_MUTATION = gql`write mutation here`;
 
 // Add similar exports for other mutations
