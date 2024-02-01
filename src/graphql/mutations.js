@@ -8,7 +8,7 @@ export const CREATE_EVENT_MUTATION = `
       }
     }
   }
-`;
+`
 
 // Mutation to create a theme
 export const CREATE_THEME_MUTATION = `
@@ -20,7 +20,7 @@ export const CREATE_THEME_MUTATION = `
       }
     }
   }
-`;
+`
 
 // Mutation to create a sponsor
 export const CREATE_SPONSOR_MUTATION = `
@@ -32,7 +32,7 @@ export const CREATE_SPONSOR_MUTATION = `
       }
     }
   }
-`;
+`
 
 // Mutation to login
 export const LOGIN_MUTATION = `
@@ -44,7 +44,7 @@ export const LOGIN_MUTATION = `
       }
     }
   }
-`;
+`
 
 // Mutation to register
 export const REGISTER_MUTATION = `
@@ -56,7 +56,7 @@ export const REGISTER_MUTATION = `
       }
     }
   }
-`;
+`
 
 // Mutation to create a club
 export const CREATE_CLUB_MUTATION = `
@@ -68,8 +68,8 @@ export const CREATE_CLUB_MUTATION = `
       }
     }
   }
-`;
+`
 
-export const CREATE_PERSON_MUTATION = `write mutation here`;
+export const CREATE_PERSON_MUTATION = `write mutation here`
 
 // Add similar exports for other mutations

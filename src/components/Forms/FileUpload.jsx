@@ -1,8 +1,7 @@
 export default function FileUpload({ id, label, help }) {
     return (
         <>
-            <div >
-
+            <div>
                 <label
                     className="block text-sm font-medium text-gray-700 p-1"
                     htmlFor={id}
@@ -23,13 +22,10 @@ export default function FileUpload({ id, label, help }) {
                     type="file"
                     name={`fileUpload@${id}`}
                 />
-                <p
-                    className=" text-sm text-gray-500 p-1.5"
-                    id={`${id}-help`}
-                >
+                <p className=" text-sm text-gray-500 p-1.5" id={`${id}-help`}>
                     {help}
                 </p>
             </div>
         </>
-    );
+    )
 }

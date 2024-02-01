@@ -1,6 +1,5 @@
 export default function SubmitButton({ type, label }) {
     return (
-
         <>
             <button
                 type={type}
@@ -8,7 +7,6 @@ export default function SubmitButton({ type, label }) {
             >
                 {label}
             </button>
-
         </>
-    );
+    )
 }

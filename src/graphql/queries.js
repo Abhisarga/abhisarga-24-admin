@@ -9,7 +9,7 @@ export const GET_CLUB_LEADS_QUERY = `
       }
     }
   }
-`;
+`
 
 export const GET_ALL_CLUB_NAMES_QUERY = `
   query GetAllClubNames {
@@ -20,7 +20,7 @@ export const GET_ALL_CLUB_NAMES_QUERY = `
       }
     }
   }
-`;
+`
 
 export const GET_ALL_COLEAD_PEOPLE_QUERY = `
   query GetAllCoLeadPeople {
@@ -28,4 +28,4 @@ export const GET_ALL_COLEAD_PEOPLE_QUERY = `
       _id
       name
   }
-`;
+`

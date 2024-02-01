@@ -1,21 +1,19 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
-import { CloseIcon } from '../Icons/Icons';
+import React, { useState, useEffect } from 'react'
+import { CloseIcon } from '../Icons/Icons'
 
 const Modal = ({ opened, setOpened, title, children }) => {
-
     const closeModal = () => {
-        setOpened(false);
-    };
+        setOpened(false)
+    }
 
     useEffect(() => {
-        setOpened(opened);
-    }, [opened,setOpened]);
+        setOpened(opened)
+    }, [opened, setOpened])
 
     return (
         <>
-
             {opened && (
                 <div
                     id="hs-basic-modal"
@@ -42,7 +40,7 @@ const Modal = ({ opened, setOpened, title, children }) => {
                 </div>
             )}
         </>
-    );
-};
+    )
+}
 
-export default Modal;
+export default Modal

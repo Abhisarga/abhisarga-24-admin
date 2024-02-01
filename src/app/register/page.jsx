@@ -1,6 +1,5 @@
 export default function Page() {
     return (
-
         <>
             {/*
   Heads up! 👋
@@ -39,15 +38,14 @@ export default function Page() {
                             </h2>
 
                             <p className="mt-4 leading-relaxed text-white/90">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam,
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Eligendi nam dolorum aliquam,
                                 quibusdam aperiam voluptatum.
                             </p>
                         </div>
                     </section>
 
-                    <main
-                        className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6"
-                    >
+                    <main className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
                         <div className="max-w-xl lg:max-w-3xl">
                             <div className="relative -mt-16 block lg:hidden">
                                 <a
@@ -73,14 +71,21 @@ export default function Page() {
                                 </h1>
 
                                 <p className="mt-4 leading-relaxed text-gray-500">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam,
-                                    quibusdam aperiam voluptatum.
+                                    Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit. Eligendi nam dolorum
+                                    aliquam, quibusdam aperiam voluptatum.
                                 </p>
                             </div>
 
-                            <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+                            <form
+                                action="#"
+                                className="mt-8 grid grid-cols-6 gap-6"
+                            >
                                 <div className="col-span-6 sm:col-span-3">
-                                    <label htmlFor="FirstName" className="block text-sm font-medium text-gray-700">
+                                    <label
+                                        htmlFor="FirstName"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
                                         First Name
                                     </label>
 
@@ -93,7 +98,10 @@ export default function Page() {
                                 </div>
 
                                 <div className="col-span-6 sm:col-span-3">
-                                    <label htmlFor="LastName" className="block text-sm font-medium text-gray-700">
+                                    <label
+                                        htmlFor="LastName"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
                                         Last Name
                                     </label>
 
@@ -106,7 +114,13 @@ export default function Page() {
                                 </div>
 
                                 <div className="col-span-6">
-                                    <label htmlFor="Email" className="block text-sm font-medium text-gray-700"> Email </label>
+                                    <label
+                                        htmlFor="Email"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        {' '}
+                                        Email{' '}
+                                    </label>
 
                                     <input
                                         type="email"
@@ -117,7 +131,13 @@ export default function Page() {
                                 </div>
 
                                 <div className="col-span-6 sm:col-span-3">
-                                    <label htmlFor="Password" className="block text-sm font-medium text-gray-700"> Password </label>
+                                    <label
+                                        htmlFor="Password"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        {' '}
+                                        Password{' '}
+                                    </label>
 
                                     <input
                                         type="password"
@@ -128,7 +148,10 @@ export default function Page() {
                                 </div>
 
                                 <div className="col-span-6 sm:col-span-3">
-                                    <label htmlFor="PasswordConfirmation" className="block text-sm font-medium text-gray-700">
+                                    <label
+                                        htmlFor="PasswordConfirmation"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
                                         Password Confirmation
                                     </label>
 
@@ -141,7 +164,10 @@ export default function Page() {
                                 </div>
 
                                 <div className="col-span-6">
-                                    <label htmlFor="MarketingAccept" className="flex gap-4">
+                                    <label
+                                        htmlFor="MarketingAccept"
+                                        className="flex gap-4"
+                                    >
                                         <input
                                             type="checkbox"
                                             id="MarketingAccept"
@@ -150,7 +176,9 @@ export default function Page() {
                                         />
 
                                         <span className="text-sm text-gray-700">
-                                            I want to receive emails about events, product updates and company announcements.
+                                            I want to receive emails about
+                                            events, product updates and company
+                                            announcements.
                                         </span>
                                     </label>
                                 </div>
@@ -158,22 +186,38 @@ export default function Page() {
                                 <div className="col-span-6">
                                     <p className="text-sm text-gray-500">
                                         By creating an account, you agree to our
-                                        <a href="#" className="text-gray-700 underline"> terms and conditions </a>
+                                        <a
+                                            href="#"
+                                            className="text-gray-700 underline"
+                                        >
+                                            {' '}
+                                            terms and conditions{' '}
+                                        </a>
                                         and
-                                        <a href="#" className="text-gray-700 underline">privacy policy</a>.
+                                        <a
+                                            href="#"
+                                            className="text-gray-700 underline"
+                                        >
+                                            privacy policy
+                                        </a>
+                                        .
                                     </p>
                                 </div>
 
                                 <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                                    <button
-                                        className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
-                                    >
+                                    <button className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
                                         Create an account
                                     </button>
 
                                     <p className="mt-4 text-sm text-gray-500 sm:mt-0">
-                                        Already have an account? 
-                                        <a href="#" className="text-gray-700 underline">Log in</a>.
+                                        Already have an account?
+                                        <a
+                                            href="#"
+                                            className="text-gray-700 underline"
+                                        >
+                                            Log in
+                                        </a>
+                                        .
                                     </p>
                                 </div>
                             </form>
@@ -182,5 +226,5 @@ export default function Page() {
                 </div>
             </section>
         </>
-    );
+    )
 }
