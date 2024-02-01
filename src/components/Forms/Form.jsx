@@ -1,5 +1,5 @@
 'use client';
-import { useMutation } from '@apollo/client';
+
 
 /*
 a generic form submit handler
@@ -66,7 +66,7 @@ function aahniks_recursiveSyntaxProcessor(key, value, variables) {
 }
 
 export function FormCard({ mutation, children }) {
-    const [submitData, { loading, error }] = useMutation(mutation);
+    // const [submitData, { loading, error }] = useMutation(mutation);
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -84,9 +84,9 @@ export function FormCard({ mutation, children }) {
             console.log(variables);
 
             // TODO: TEST
-            const response = await submitData({
-                variables: { input: variables }, // Adjust the input structure as needed
-            });
+            // const response = await submitData({
+            //     variables: { input: variables }, // Adjust the input structure as needed
+            // });
 
             // // Access the data from the response
             // const responseData = response.data.YOUR_MUTATION_NAME;

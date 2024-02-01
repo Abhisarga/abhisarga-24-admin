@@ -1,7 +1,5 @@
-import { gql } from "@apollo/client";
-
 // Mutation to create an event
-export const CREATE_EVENT_MUTATION = gql`
+export const CREATE_EVENT_MUTATION = `
   mutation CreateEvent($event: EventInput!) {
     CreateEvent(event: $event) {
       status
@@ -13,7 +11,7 @@ export const CREATE_EVENT_MUTATION = gql`
 `;
 
 // Mutation to create a theme
-export const CREATE_THEME_MUTATION = gql`
+export const CREATE_THEME_MUTATION = `
   mutation CreateTheme($input: ThemeInput!) {
     CreateTheme(input: $input) {
       status
@@ -25,7 +23,7 @@ export const CREATE_THEME_MUTATION = gql`
 `;
 
 // Mutation to create a sponsor
-export const CREATE_SPONSOR_MUTATION = gql`
+export const CREATE_SPONSOR_MUTATION = `
   mutation CreateSponsor($input: SponsorInput!) {
     CreateSponsor(input: $input) {
       status
@@ -37,7 +35,7 @@ export const CREATE_SPONSOR_MUTATION = gql`
 `;
 
 // Mutation to login
-export const LOGIN_MUTATION = gql`
+export const LOGIN_MUTATION = `
   mutation Login($password: String!, $email: String!) {
     Login(password: $password, email: $email) {
       status
@@ -49,7 +47,7 @@ export const LOGIN_MUTATION = gql`
 `;
 
 // Mutation to register
-export const REGISTER_MUTATION = gql`
+export const REGISTER_MUTATION = `
   mutation Register($user: UserInput!) {
     Register(user: $user) {
       status
@@ -61,7 +59,7 @@ export const REGISTER_MUTATION = gql`
 `;
 
 // Mutation to create a club
-export const CREATE_CLUB_MUTATION = gql`
+export const CREATE_CLUB_MUTATION = `
   mutation CreateClub($input: ClubInput!) {
     CreateClub(input: $input) {
       status
@@ -72,6 +70,6 @@ export const CREATE_CLUB_MUTATION = gql`
   }
 `;
 
-// export const CREATE_PERSON_MUTATION = gql`write mutation here`;
+export const CREATE_PERSON_MUTATION = `write mutation here`;
 
 // Add similar exports for other mutations
