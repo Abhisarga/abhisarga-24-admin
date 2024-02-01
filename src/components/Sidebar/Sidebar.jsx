@@ -1,10 +1,8 @@
-export default function SideBar({
-    appName,
-    homeLink,
-    hidden,
-    setHidden,
-    children,
-}) {
+import { AdminContext } from '@/app/admin/context'
+import { useContext } from 'react'
+
+export default function SideBar({ appName, homeLink, children }) {
+    const [hidden, setHidden] = useContext(AdminContext)
     // pass the sidebaritems as children
     return (
         <>

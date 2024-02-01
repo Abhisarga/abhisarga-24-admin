@@ -1,6 +1,9 @@
+import { useContext } from 'react'
 import { MenuIcon } from '../Icons/Icons'
+import { AdminContext } from '@/app/admin/context'
 
-export default function TopBar({ hidden, setHidden }) {
+export default function TopBar() {
+    const [hidden, setHidden] = useContext(AdminContext)
     return (
         <>
             <div className="">

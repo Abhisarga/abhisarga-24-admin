@@ -4,37 +4,43 @@ import { SideMenu, SideMenuGroup } from '@/components/Sidebar/SideMenu'
 import SideBar from '@/components/Sidebar/Sidebar'
 import TopBar from '@/components/TopBar/TopBar'
 import { useState } from 'react'
-
+import { AdminContext } from './context'
 export default function RootLayout({ children }) {
     const urlBase = '/admin/adit/'
-    const [hidden, setHidden] = useState(false)
+    const [hidden, setHidden] = useState(true)
+
     return (
         <>
-            <TopBar hidden={hidden} setHidden={setHidden} />
+            <AdminContext.Provider value={[hidden, setHidden]}>
+                <TopBar />
 
-            <div className="flex">
-                <SideBar
-                    appName={'Abhisarga 24'}
-                    homeLink={'/admin'}
-                    hidden={hidden}
-                    setHidden={setHidden}
-                >
-                    <SideMenu title={'Users'} link={urlBase + 'users'} />
+                <div className="flex">
+                    <SideBar appName={'Abhisarga 24'} homeLink={'/admin'}>
+                        <SideMenu title={'Users'} link={urlBase + 'users'} />
 
-                    <SideMenuGroup title={'Clubs'}>
-                        <SideMenu title={'Club'} link={urlBase + 'clubs'} />
-                        <SideMenu title={'Events'} link={urlBase + 'events'} />
-                    </SideMenuGroup>
+                        <SideMenuGroup title={'Clubs'}>
+                            <SideMenu title={'Club'} link={urlBase + 'clubs'} />
+                            <SideMenu
+                                title={'Events'}
+                                link={urlBase + 'events'}
+                            />
+                        </SideMenuGroup>
 
-                    <SideMenu title={'Sponsors'} link={urlBase + 'sponsors'} />
+                        <SideMenu
+                            title={'Sponsors'}
+                            link={urlBase + 'sponsors'}
+                        />
 
-                    <SideMenu title={'Persons'} link={urlBase + 'person'} />
-                </SideBar>
+                        <SideMenu title={'Persons'} link={urlBase + 'person'} />
+                    </SideBar>
 
-                <div className="bg-gray-50 w-full">
-                    <div className="w-full mx-auto text-black">{children}</div>
+                    <div className="bg-gray-50 w-full">
+                        <div className="w-full mx-auto text-black">
+                            {children}
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </AdminContext.Provider>
         </>
     )
 }
