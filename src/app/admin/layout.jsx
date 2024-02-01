@@ -2,13 +2,19 @@
 
 import { SideMenu, SideMenuGroup } from "@/components/Sidebar/SideMenu";
 import SideBar from "@/components/Sidebar/Sidebar";
+import TopBar from "@/components/TopBar/TopBar";
+import { useState } from "react";
 
 export default function RootLayout({ children }) {
 
     const urlBase = '/admin/adit/';
+    const [hidden, setHidden] = useState(false);
     return (<>
+
+        <TopBar hidden={hidden} setHidden={setHidden} />
+
         <div className="flex">
-            <SideBar appName={'Abhisarga 24'} homeLink={'/admin'}>
+            <SideBar appName={'Abhisarga 24'} homeLink={'/admin'} hidden={hidden} setHidden={setHidden}>
                 <SideMenu title={'Users'} link={urlBase + 'users'} />
 
                 <SideMenuGroup title={'Clubs'}>

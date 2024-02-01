@@ -1,20 +1,21 @@
 
 
-export default function SideBar({ appName, homeLink, children }) {
+export default function SideBar({ appName, homeLink, hidden, setHidden, children }) {
     // pass the sidebaritems as children
     return (<>
-        <div className="h-screen sticky top-0 flex flex-col justify-between border-e bg-white max-w-sm lg:max-w-md">
+        {!hidden &&
+            <div className="absolute h-screen w-screen z-10" onClick={() => setHidden(true)}>
+            </div>
+        }
+        <div className={`z-20 h-screen sm:sticky  fixed top-0 sm:flex flex-col justify-between border-e bg-white max-w-sm lg:max-w-md ${hidden ? 'hidden' : ''}`}>
             <div className="px-4 py-6">
                 <a href={homeLink}> <span className="hover:shadow-lg hover:font-extrabold grid h-10 w-32 place-content-center rounded-lg bg-indigo-700 text-sm text-white font-bold">
                     {appName}
                 </span></a>
-
-
                 <ul className="mt-6 space-y-1">
                     {children}
                 </ul>
             </div>
-
             <SideBarFooter />
         </div>
 
