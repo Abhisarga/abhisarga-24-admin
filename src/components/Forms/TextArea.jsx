@@ -1,16 +1,23 @@
 export default function TextArea({ id, label, placeholder }) {
-    return (<>
+    return (
+        <>
+            <div>
+                <label
+                    htmlFor={id}
+                    className="block text-sm font-medium text-gray-700 p-1"
+                >
+                    {' '}
+                    {label}{' '}
+                </label>
 
-        <div>
-            <label htmlFor={id} className="block text-sm font-medium text-gray-700 p-1"> {label} </label>
-
-            <textarea
-                id={id}
-                name={id}
-                className="mt-2 w-full rounded-lg border-gray-200 align-top shadow-sm sm:text-sm"
-                rows="4"
-                placeholder={placeholder}
-            ></textarea>
-        </div>
-    </>);
-} 
+                <textarea
+                    id={id}
+                    name={id}
+                    className="mt-2 w-full rounded-lg border-gray-200 align-top shadow-sm sm:text-sm"
+                    rows="4"
+                    placeholder={placeholder}
+                ></textarea>
+            </div>
+        </>
+    )
+}

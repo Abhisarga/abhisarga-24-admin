@@ -1,40 +1,46 @@
 'use client'
 
-import { SideMenu, SideMenuGroup } from "@/components/Sidebar/SideMenu";
-import SideBar from "@/components/Sidebar/Sidebar";
-
+import { SideMenu, SideMenuGroup } from '@/components/Sidebar/SideMenu'
+import SideBar from '@/components/Sidebar/Sidebar'
+import TopBar from '@/components/TopBar/TopBar'
+import { useState } from 'react'
+import { AdminContext } from './context'
 export default function RootLayout({ children }) {
+    const urlBase = '/admin/adit/'
+    const [hidden, setHidden] = useState(true)
 
-    const urlBase = '/admin/adit/';
-    return (<>
-        <div className="flex">
-            <SideBar appName={'Abhisarga 24'} homeLink={'/admin'}>
-                <SideMenu title={'Users'} link={urlBase + 'users'} />
+    return (
+        <>
+            <AdminContext.Provider value={[hidden, setHidden]}>
+                <TopBar />
 
-                <SideMenuGroup title={'Clubs'}>
-                    <SideMenu title={'Club'} link={urlBase + 'clubs'} />
-                    <SideMenu title={'Events'} link={urlBase + 'events'} />
-                </SideMenuGroup>
+                <div className="flex">
+                    <SideBar appName={'Abhisarga 24'} homeLink={'/admin'}>
+                        <SideMenu title={'Users'} link={urlBase + 'users'} />
 
+                        <SideMenuGroup title={'Clubs'}>
+                            <SideMenu title={'Club'} link={urlBase + 'clubs'} />
+                            <SideMenu
+                                title={'Events'}
+                                link={urlBase + 'events'}
+                            />
+                        </SideMenuGroup>
 
-                <SideMenu title={'Sponsors'} link={urlBase + 'sponsors'} />
+                        <SideMenu
+                            title={'Sponsors'}
+                            link={urlBase + 'sponsors'}
+                        />
 
-                <SideMenu title={'Persons'} link={urlBase + 'person'} />
+                        <SideMenu title={'Persons'} link={urlBase + 'person'} />
+                    </SideBar>
 
-
-            </SideBar>
-
-
-            <div className="bg-gray-50 w-full">
-
-                <div className="w-full mx-auto text-black">
-                    {children}
+                    <div className="bg-gray-50 w-full">
+                        <div className="w-full mx-auto text-black">
+                            {children}
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-        </div>
-
-
-    </>);
-
+            </AdminContext.Provider>
+        </>
+    )
 }
