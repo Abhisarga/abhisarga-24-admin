@@ -4,6 +4,8 @@ export default function InputBox({
     type = 'text',
     placeholder,
     icon,
+    value,
+    onChange
 }) {
     return (
         <>
@@ -22,6 +24,8 @@ export default function InputBox({
                         type={type}
                         className="w-full rounded-lg border-gray-200 p-3 pe-12 text-sm shadow-sm"
                         placeholder={placeholder}
+                        value={value}
+                        onChange={onChange}
                     />
 
                     {icon && (
