@@ -1,4 +1,4 @@
-export function SelectDropDown({ id, label, placeholder, options, children }) {
+export function SelectDropDown({ id, label, placeholder, options, isDisabled = false, children }) {
     /*
     pass the options as children
     */
@@ -17,6 +17,7 @@ export function SelectDropDown({ id, label, placeholder, options, children }) {
                     name={id}
                     id={id}
                     className="mt-1.5 w-full rounded-lg border-gray-300 text-gray-700 sm:text-sm p-3"
+                    disabled={isDisabled}
                 >
                     <option value="none" selected disabled hidden>
                         {placeholder}{' '}
@@ -30,7 +31,7 @@ export function SelectDropDown({ id, label, placeholder, options, children }) {
                             </option>
                         ))}
                 </select>
-            </div>
+            </div >
         </>
     )
 }
