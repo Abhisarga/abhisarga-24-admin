@@ -16,6 +16,7 @@ import { RadioGroup, RadioItem } from '@/components/Forms/RadioGroup'
 import { ListItem } from '@/components/Forms/ListInput'
 import PasswordInputBox from '@/components/Forms/PasswordInput'
 import { REGISTER_MUTATION } from '@/graphql/mutations'
+import RegistrationFormCard from '@/components/FormCards/RegistrationFormCard'
 export default function Page() {
     return (
         <>
@@ -28,65 +29,7 @@ export default function Page() {
                     }
                 />
 
-                <FormCard mutation={REGISTER_MUTATION}>
-                    <FormHeader>
-                        <FormTitle title={'User Details'} />
-                        <FormDescription
-                            description={'Create a new User entity'}
-                        />
-                    </FormHeader>
-
-                    <InputBox
-                        id={'user.name'}
-                        label={'Name'}
-                        type={'text'}
-                        placeholder={'Enter User Name'}
-                    />
-                    <InputBox
-                        id={'user.email'}
-                        label={'Email'}
-                        type={'email'}
-                        placeholder={'Enter User email'}
-                        icon={<EmailIcon />}
-                    />
-
-                    <InputBox
-                        id={'user.phone'}
-                        label={'Phone'}
-                        type={'text'}
-                        placeholder={'Enter User phone'}
-                    />
-                    <ListItem label={'Account Security'}>
-                        <PasswordInputBox id={'user.password'} />
-                    </ListItem>
-
-                    <InputBox
-                        id={'user.college'}
-                        label={'College'}
-                        placeholder={'Enter your college'}
-                    />
-
-                    <SelectDropDown label={'User Role'}>
-                        <option value={'admin'}> Admin </option>
-                        <option value={'participant'}> Participant </option>
-                        <option value={'club-lead'}> Club Lead </option>
-                    </SelectDropDown>
-
-                    <SelectDropDown id={'user.club'} label={'Club'}>
-                        <option value={'None'}> None </option>
-                        <option value={'Enigma'}> Enigma </option>
-                        <option value={'GDSC'}> GDSC </option>
-                    </SelectDropDown>
-
-                    <FormFooter>
-                        <SubmitButton
-                            type={'submit'}
-                            label={'Add new Person'}
-                        />
-
-                        <ExtraLink link={''} label={'View all Person'} />
-                    </FormFooter>
-                </FormCard>
+                <RegistrationFormCard submitLabel={'Save User'} forAdmin={true} />
             </Arena>
         </>
     )
